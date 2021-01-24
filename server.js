@@ -2,6 +2,17 @@ const express = require('express');
 
 const app = express();
 
+const connectDB = require('./config/db');
+
+
+//init Middleware
+
+app.use(express.json({extended: false}))
+
+//connect Database
+
+connectDB();
+
 
 //intialize routes
 
